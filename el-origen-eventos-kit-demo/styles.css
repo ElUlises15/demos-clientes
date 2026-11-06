@@ -52,7 +52,7 @@ p{margin:0}
 /* Portada */
 .portada{position:relative;overflow:hidden}
 .portada__foto{display:block;position:relative}
-.portada__foto img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 45%}
+.portada__foto img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 45%}
 .portada__foto::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,transparent 52%,var(--noche) 98%)}
 .portada__texto{position:relative;z-index:1;margin-top:-5.5rem;padding:0 1.25rem 2.75rem}
 h1{margin:0;font-weight:inherit}
@@ -87,7 +87,7 @@ h1{margin:0;font-weight:inherit}
 .paso__foto{margin:0;overflow:hidden;border-radius:2px}
 .paso__foto img{width:100%;object-fit:cover}
 .paso__foto--chica{max-width:18rem}
-.paso__foto img,.paso__foto--chica img{aspect-ratio:4/3;object-fit:cover;object-position:50% 45%}
+.paso__foto img,.paso__foto--chica img{aspect-ratio:1/1;object-fit:cover;object-position:50% 45%}
 .paso__fotos{display:grid;gap:.6rem;grid-template-columns:repeat(2,minmax(0,1fr))}
 .paso__fotos>:first-child{grid-column:1/-1}
 .trastienda{margin-top:3rem;padding-top:1.25rem;border-top:1px solid #3e4268;max-width:52ch;font-size:1.125rem}
@@ -166,8 +166,14 @@ h1{margin:0;font-weight:inherit}
 .pie .lema{margin-bottom:.75rem}
 .pie__demo{max-width:62ch;color:var(--niebla);font-size:.875rem}
 
+/* Botón flotante de WhatsApp (siempre visible) */
+.fab{position:fixed;z-index:50;right:calc(12px + env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.28);text-decoration:none}
+.fab:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.fab svg{display:block}
+
 /* Barra de acción en celular */
 .barra{position:fixed;inset:auto 0 0;z-index:40;display:flex;gap:.5rem;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:var(--noche);border-top:1px solid #34385a;transition:transform .35s var(--curva),visibility .35s}
+.js .barra.visible~.fab{bottom:calc(4.25rem + env(safe-area-inset-bottom,0px))}
 .barra .btn{flex:1 1 0;min-width:0;padding-inline:.5rem}
 .js .barra:not(.visible){transform:translateY(110%);visibility:hidden}
 

@@ -43,9 +43,4 @@
   }, { rootMargin: '0px 0px -10% 0px' });
   bloques.forEach(function (b) { observador.observe(b); });
 
-  // La barra de WhatsApp aparece recién cuando el CTA del hero sale de pantalla.
-  var barra = document.querySelector('[data-wa-fijo]');
-  new IntersectionObserver(function (entradas) {
-    barra.classList.toggle('oculta', entradas[0].isIntersecting);
-  }).observe(document.querySelector('.hero-texto .cta'));
 })();

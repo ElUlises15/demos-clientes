@@ -21,7 +21,6 @@
     var texto = [
       '¡Hola! Quiero consultar por un evento en El Origen.',
       'Evento: ' + form.tipo.value,
-      'Servicio: ' + form.servicio.value,
       'Fecha aproximada: ' + fechaAr(form.fecha.value),
       'Invitados: ' + (invitados || 'A definir')
     ].join('\n');

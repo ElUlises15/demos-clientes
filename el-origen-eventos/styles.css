@@ -62,14 +62,13 @@ h1{margin:0;font-weight:inherit}
 .lema--chico{margin-top:.25rem;font-size:clamp(2rem,8vw,2.75rem)}
 .portada__datos{margin:.85rem 0 1.4rem;max-width:40ch;color:var(--lino)}
 
-/* Eventos */
+/* Eventos: lista integrada (una fila por festejo en móvil) */
 .eventos{padding:3.75rem 0}
-/* El separador va antes de cada ítem y el clip oculta el del inicio de cada línea */
-.tipos{display:flex;flex-wrap:wrap;margin:1.5rem 0 0 -1.6rem;padding:0;list-style:none;clip-path:inset(-8px -8px -8px 1rem)}
-.tipos li{position:relative;padding-left:1.6rem}
-.tipos li::before{content:"";position:absolute;left:.65rem;top:50%;width:.3rem;height:.3rem;margin-top:-.15rem;border-radius:50%;background:var(--oro)}
-.tipos a{display:inline-flex;align-items:center;min-height:48px;font-weight:300;font-size:clamp(1.6rem,6.6vw,2.75rem);line-height:1.15;text-decoration:none;transition:transform .3s var(--curva),opacity .3s}
-.tipos a:hover{transform:translateY(-3px);opacity:.75}
+.tipos{display:flex;flex-direction:column;margin:1.35rem 0 0;padding:0;list-style:none;border-top:1px solid #34385a}
+.tipos li{position:relative;border-bottom:1px solid #34385a}
+.tipos li::before{content:"";position:absolute;left:0;top:50%;width:.35rem;height:.35rem;margin-top:-.175rem;border-radius:50%;background:var(--oro)}
+.tipos a{display:flex;align-items:center;min-height:52px;padding:.55rem 0 .55rem 1.35rem;font-weight:300;font-size:clamp(1.35rem,5.6vw,1.85rem);line-height:1.2;text-decoration:none;transition:transform .3s var(--curva),opacity .3s,color .3s}
+.tipos a:hover{transform:translateX(4px);opacity:.85;color:var(--oro)}
 .resena{margin:2.5rem 0 0;padding-top:1.25rem;border-top:1px solid #34385a}
 .resena blockquote{margin:0;max-width:34ch;font-size:1.25rem;font-weight:300}
 .resena figcaption{margin-top:.5rem;font-size:.9375rem;color:var(--niebla)}
@@ -204,7 +203,9 @@ h1{margin:0;font-weight:inherit}
   .acciones .btn{flex:0 1 auto}
 
   .eventos,.noche,.alquiler,.consulta,.preguntas,.llegar{padding:6rem 0}
-  .tipos{max-width:58rem}
+  .tipos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:58rem;column-gap:2.5rem;border-top:0}
+  .tipos li{border-bottom:1px solid #34385a}
+  .tipos a{min-height:56px;font-size:clamp(1.6rem,2.4vw,2.1rem)}
 
   .pasos{padding-left:0}
   .hilo{left:50%}

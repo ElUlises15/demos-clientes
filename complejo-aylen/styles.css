@@ -37,11 +37,11 @@ h2{font-size:clamp(2.75rem,12vw,6.5rem);line-height:.92;letter-spacing:-.01em}
 .demo{position:sticky;top:0;z-index:20;padding:.35rem var(--borde);background:var(--negro);color:#fff;font-size:.8125rem;line-height:1.35}
 @media(max-height:480px){.demo{position:static}}
 
-.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.25rem 1.5rem;padding:.75rem var(--borde)}
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.35rem 1.5rem;padding:.75rem var(--borde)}
 .marca{display:flex;align-items:center;gap:.6rem;font:600 1.25rem/1 var(--display);text-transform:uppercase;letter-spacing:.02em;text-decoration:none}
 .marca img{width:44px;height:44px;mix-blend-mode:multiply}
-.top nav{display:flex;gap:1.1rem;margin-left:-.1rem}
-.top nav a{display:inline-block;padding:.65rem 0;font:600 1.0625rem/1.2 var(--display);text-decoration:none;text-transform:uppercase;letter-spacing:.02em}
+.top nav{display:flex;flex-wrap:wrap;gap:.15rem 1rem;width:100%;margin:0;padding-top:.15rem;border-top:1px solid var(--plata)}
+.top nav a{display:inline-flex;align-items:center;min-height:44px;padding:.35rem 0;font:600 1.0625rem/1.2 var(--display);text-decoration:none;text-transform:uppercase;letter-spacing:.02em}
 .top nav a:hover{text-decoration:underline;text-decoration-color:var(--rojo);text-decoration-thickness:3px}
 
 .cta{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:.8rem 1.5rem;background:var(--rojo);color:#fff;font:600 1.3125rem/1.1 var(--display);text-transform:uppercase;letter-spacing:.02em;text-decoration:none;text-align:center}
@@ -59,7 +59,7 @@ h2{font-size:clamp(2.75rem,12vw,6.5rem);line-height:.92;letter-spacing:-.01em}
 .tel{display:block;width:max-content;padding:.75rem 0;font-weight:600}
 .hero-foto{position:relative;margin:0;background:transparent;max-width:min(100%,28rem);margin-inline:auto}
 .hero-foto img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 45%}
-.hero-dato{position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.1rem 1.25rem;width:100%;margin-top:-1.5rem;padding:.65rem .9rem .65rem var(--borde);background:var(--negro);color:#fff;font:600 1.1875rem/1.2 var(--display);text-transform:uppercase;letter-spacing:.02em}
+.hero-dato{position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.35rem 1.25rem;width:100%;margin-top:-1.5rem;padding:.75rem .9rem .75rem var(--borde);background:var(--negro);color:#fff;font:600 1.125rem/1.25 var(--display);text-transform:uppercase;letter-spacing:.02em}
 .hero-dato b{font-weight:600;color:var(--rojo-luz)}
 
 /* Predio: lista tipográfica, no cards */
@@ -69,9 +69,9 @@ h2{font-size:clamp(2.75rem,12vw,6.5rem);line-height:.92;letter-spacing:-.01em}
 .predio-foto{width:100%;max-width:min(100%,28rem);margin-top:2rem;margin-inline:0}
 .predio-foto img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 42%}
 .lista{border-top:3px solid var(--negro)}
-.lista li{padding:1.1rem 0 1.2rem;border-bottom:1px solid var(--plata)}
-.lista h3{font:800 italic clamp(1.75rem,6.4vw,2.75rem)/1 var(--display);text-transform:uppercase}
-.lista p{margin-top:.35rem;color:var(--gris);max-width:48ch}
+.lista li{padding:1rem 0 1.05rem;border-bottom:1px solid var(--plata)}
+.lista h3{font:800 italic clamp(1.6rem,6vw,2.75rem)/1.05 var(--display);text-transform:uppercase}
+.lista p{margin-top:.4rem;color:var(--gris);max-width:48ch;line-height:1.5}
 .lista a{color:var(--negro);font-weight:600}
 .salud{display:grid;gap:.85rem}
 .salud .foto-34{margin:0;width:100%;max-width:min(100%,28rem)}
@@ -107,7 +107,7 @@ h2{font-size:clamp(2.75rem,12vw,6.5rem);line-height:.92;letter-spacing:-.01em}
 .ojo{margin:1rem 0 1.5rem;max-width:42ch;color:var(--gris)}
 .horas{width:100%;border-collapse:collapse;font:600 1.5rem/1.2 var(--display);text-transform:uppercase}
 .horas caption{text-align:left;padding-bottom:.6rem;font:400 1rem/1.4 Barlow,system-ui,sans-serif;text-transform:none;color:var(--gris)}
-.horas th,.horas td{padding:.65rem 0;border-top:1px solid var(--plata);text-align:left;font-weight:600}
+.horas th,.horas td{padding:.7rem 0;border-top:1px solid var(--plata);text-align:left;font-weight:600;vertical-align:baseline}
 .horas tr:first-child th,.horas tr:first-child td{border-top:3px solid var(--negro)}
 .horas td{text-align:right}
 .horas tr.hoy th,.horas tr.hoy td{color:var(--rojo)}
@@ -127,7 +127,7 @@ h2{font-size:clamp(2.75rem,12vw,6.5rem);line-height:.92;letter-spacing:-.01em}
 
 @media(min-width:960px){
   .top{flex-wrap:nowrap}
-  .top nav{gap:2rem;margin-left:0}
+  .top nav{width:auto;gap:2rem;margin-left:0;padding-top:0;border-top:0}
 
   .hero{grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:auto 1fr auto;padding-top:0}
   .hero h1{grid-column:1/8;grid-row:1;padding-top:1rem;padding-right:0;font-size:clamp(5.5rem,10.5vw,13rem)}
